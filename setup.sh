@@ -3,8 +3,10 @@
 
 # Permissions check
 if (( $EUID != 0 )); then
-    echo "Please run as root, or with sudo"
+    echo "Please run as root, or with sudo";
     exit 1;
+else
+    echo "Running as root..";
 fi
 
 # Exit errors
